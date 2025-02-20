@@ -1,0 +1,10 @@
+{
+    "gopls": {
+        "ui.semanticTokens": true
+    },
+    "[go]": {
+        "editor.formatOnSave": true
+    },
+    "go.formatTool": "gofmt",
+    "go.inlayHints.rangeVariableTypes": true
+}
