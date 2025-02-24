@@ -3,7 +3,8 @@
         "ui.semanticTokens": true
     },
     "[go]": {
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
     },
     "go.formatTool": "gofmt",
     "go.inlayHints.rangeVariableTypes": true
