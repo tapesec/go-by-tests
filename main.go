@@ -1,10 +1,9 @@
 package main
 
 import (
-	"os"
+	"fmt"
+	"net/http"
 	"time"
-
-	"github.com/tapesec/go-by-tests/mock"
 )
 
 type DefaultSleeper struct{}
@@ -14,6 +13,12 @@ func (s DefaultSleeper) Sleep() {
 }
 
 func main() {
+	resp, err := http.Get("https://www.google.com")
+	if err != nil {
+		fmt.Printf("Error fetching URL: %v\n", err)
+		return
+	}
+	defer resp.Body.Close()
 
-	mock.Countdown(os.Stdout, DefaultSleeper{})
+	fmt.Println(resp.Status)
 }
